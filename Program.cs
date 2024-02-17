@@ -27,17 +27,43 @@ namespace Praktikum17
 
             //2) Инициализировать одномерный массив с использованием конструктора , без указания размерности массива и без клавиатуры.
 
-            int[] omas = { -3, 5, 7, -1, 10, 15 };
-            int i;
+            //int[] omas = { -3, 5, 7, -1, 10, 15 };
+            //int i;
 
-            for (i = 0; i < omas.Length; i++)
-            {
-                Console.WriteLine($"omas[{i}]={omas[i]} ");
-            }
-            Console.ReadKey();
+            //for (i = 0; i < omas.Length; i++)
+            //{
+            //    Console.WriteLine($"omas[{i}]={omas[i]} ");
+            //}
+            //Console.ReadKey();
 
             //3) Заполнить одномерный массив соответствующими индексами (по формуле) и вывести с использованием цикла foreach.
 
+                        //int i;
+            //int[] omas = new int[5];
+            //for (i = 0; i < omas.Length; i++)
+            //{
+            // //Console.Write($"omas[{i}]= ");
+            // omas[i] = i;
+            //}
+            //foreach (var element in omas)
+            //{
+            // Console.Write($"{element}\t");
+            //}
+
+            //4) Заполнить одномерный массив случайным образом и вывести на экран с использованием цикла foreach.
+
+            Random rand = new Random();
+            int i;
+            int[] omas = new int[5];
+            for (i = 0; i < omas.Length; i++)
+            {
+                omas[i] = rand.Next(-10, 10);
+            }
+            foreach (var element in omas)
+            {
+                Console.Write($"{element}\t");
+            }
+            Console.ReadKey();
         }
     }
 }
